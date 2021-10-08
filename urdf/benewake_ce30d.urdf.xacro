@@ -4,9 +4,6 @@
   <xacro:property name="M_PI" value="3.1415926535897931" />
 
   <xacro:macro name="sensor_benewake_ce30d" params="prefix parent prefix_topic:='lidar_3d' *origin range_min:=0.4 range_max:=28.0 hfov:=60.0 vfov:=4.0 fps:=30.0 gpu:=^|true">
-    <material name="black_alu">
-      <color rgba="0.9 0.9 0.9 1"/>
-    </material>
 
     <joint name="${prefix}_base_joint" type="fixed">
       <xacro:insert_block name="origin" />
@@ -45,7 +42,7 @@
     </joint>
     <link name="${prefix}_link"/>
 
-  <sensor_benewake_ce30d_gazebo range_min="${range_min}" range_max="${range_max}" hfov="${hfov}" vfov="${vfov}" fps="${fps}" gpu="${gpu}"/>
+  <xacro:sensor_benewake_ce30d_gazebo range_min="${range_min}" range_max="${range_max}" hfov="${hfov}" vfov="${vfov}" fps="${fps}" gpu="${gpu}"/>
 
   </xacro:macro>
 
@@ -59,7 +56,7 @@
       </xacro:if>
       <xacro:unless value="${gpu}">
         <xacro:property name="ray_type" value="ray" />
-        <xacro:property name="plugin_lib" value="libgazebo_ros_block_laser.so" />
+        <xacro:property name="plugin_lib" value="libgazebo_ros_velodyne_laser.so" />
       </xacro:unless>
         <sensor type="${ray_type}" name="${prefix}_sensor">
           <pose>0 0 0 0 0 0.0</pose>

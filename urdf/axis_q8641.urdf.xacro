@@ -72,10 +72,12 @@
     <transmission name="${prefix}_pan_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}_pan_joint">
-        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <!-- <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface> -->
       </joint>
       <actuator name="pan_motor">
-        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <!-- <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface> -->
         <mechanicalReduction>${ptz_mechanical_reduction}</mechanicalReduction>
       </actuator>
     </transmission>
@@ -114,10 +116,12 @@
     <transmission name="${prefix}_tilt_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${prefix}_tilt_joint">
-        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <!-- <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface> -->
       </joint>
       <actuator name="tilt_motor">
-        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <!-- <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface> -->
         <mechanicalReduction>${ptz_mechanical_reduction}</mechanicalReduction>
       </actuator>
     </transmission>
@@ -150,7 +154,7 @@
       <material>Gazebo/FlatBlack</material>
     </gazebo>
     <!-- Axis sensor for simulation -->
-    <sensor_axis_q8641_gazebo/>
+    <xacro:sensor_axis_q8641_gazebo/>
   </xacro:macro>
 
 

@@ -3,11 +3,7 @@
 
   <xacro:property name="M_PI" value="3.1415926535897931" />
 
-  <xacro:macro name="sensor_rslidar" params="prefix parent prefix_topic *origin range_min range_max hfov hres vfov vres fps gpu:=^|true">
-
-    <material name="black_alu">
-      <color rgba="0.9 0.9 0.9 1"/>
-    </material>
+  <xacro:macro name="sensor_rslidar" params="prefix parent prefix_topic *origin range_min range_max hfov hres vfov vres fps gpu:=true">
 
     <joint name="${prefix}_base_joint" type="fixed">
       <xacro:insert_block name="origin" />
@@ -44,7 +40,7 @@
     </joint>
     <link name="${prefix}_link"/>
 
-  <sensor_rslidar_gazebo range_min="${range_min}" range_max="${range_max}" hfov="${hfov}" hres="${hres}" vfov="${vfov}" vres="${vres}" fps="${fps}" gpu="${gpu}"/>
+    <xacro:sensor_rslidar_gazebo range_min="${range_min}" range_max="${range_max}" hfov="${hfov}" hres="${hres}" vfov="${vfov}" vres="${vres}" fps="${fps}" gpu="${gpu}"/>
 
   </xacro:macro>
 
