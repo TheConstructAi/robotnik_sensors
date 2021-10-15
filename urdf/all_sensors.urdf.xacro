@@ -149,4 +149,8 @@
   <!-- Orbbec Embedded S -->
   <xacro:include filename="$(find robotnik_sensors)/urdf/embedded_s.urdf.xacro" />
 
+  <!-- Bosh Autonomous Driving Camera -->
+  <xacro:include filename="$(find robotnik_sensors)/urdf/mpc3_bosch.urdf.xacro" />
+  
+
 </robot>

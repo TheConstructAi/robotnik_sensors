@@ -14,9 +14,9 @@
     </joint>
     <link name="${prefix}_base_link">
       <inertial>
-        <mass value="2"/>
+        <mass value="0.1"/>
         <origin xyz="0 0 0.06" rpy="0 0 0"/>
-        <xacro:solid_cuboid_inertia m="2" w="0.175" h="0.175" d="0.12" />
+        <xacro:solid_cuboid_inertia m="0.1" w="0.175" h="0.175" d="0.12" />
       </inertial>
       <visual>
         <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
@@ -47,9 +47,9 @@
     </joint>
     <link name="${prefix}_pan_link">
       <inertial>
-        <mass value="5.0"/>
+        <mass value="0.1"/>
         <origin xyz="0 0 0.12" rpy="0 0 0"/>
-        <xacro:solid_cuboid_inertia m="5.0" w="0.175" h="0.175" d="0.24" />
+        <xacro:solid_cuboid_inertia m="0.1" w="0.175" h="0.175" d="0.24" />
       </inertial>
       <visual>
         <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
@@ -91,9 +91,9 @@
     </joint>
     <link name="${prefix}_tilt_link">
       <inertial>
-        <mass value="5.0"/>
+        <mass value="0.1"/>
         <origin xyz="0.04875 0 0.11" rpy="0 0 0"/>
-        <xacro:solid_cuboid_inertia m="5.0" w="0.24" h="0.09" d="0.09" />
+        <xacro:solid_cuboid_inertia m="0.1" w="0.24" h="0.09" d="0.09" />
       </inertial>
       <visual>
         <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>

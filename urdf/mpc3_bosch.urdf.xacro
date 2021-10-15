@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
 
-  <xacro:macro name="sensor_ueye_cp_gige" params="prefix parent *origin">
+  <xacro:macro name="sensor_mpc3_bosch" params="prefix parent *origin">
     <joint name="${prefix}_joint" type="fixed">
       <xacro:insert_block name="origin"/>
       <parent link="${parent}"/>
@@ -57,23 +57,23 @@
         <xacro:solid_cuboid_inertia m="0.0001" w="0.0604" h="0.029" d="0.029" />
     </inertial>
     </link>
-    <xacro:sensor_ueye_cp_gige_gazebo />
+    <xacro:sensor_mpc3_bosch_gazebo />
   </xacro:macro>
 
-  <xacro:macro name="sensor_ueye_cp_gige_gazebo">
+  <xacro:macro name="sensor_mpc3_bosch_gazebo">
     <gazebo reference="${prefix}_base_link">
       <sensor type="camera" name="${prefix}_sensor">
         <update_rate>30.0</update_rate>
         <camera name="head">
-          <horizontal_fov>1.3962634</horizontal_fov>
+          <horizontal_fov>1.74</horizontal_fov>
           <image>
-            <width>800</width>
-            <height>800</height>
+            <width>640</width>
+            <height>480</height>
             <format>R8G8B8</format>
           </image>
           <clip>
             <near>0.03</near>
-            <far>300</far>
+            <far>160.0</far>
           </clip>
           <noise>
             <type>gaussian</type>
