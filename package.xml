@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package>
+<package format="2">
   <name>robotnik_sensors</name>
   <version>1.2.7</version>
   <description>Robotnik standard sensors description. URDF and meshses.</description>
