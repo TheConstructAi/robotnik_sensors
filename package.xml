@@ -9,8 +9,6 @@
   <author email="rnavarro@robotnik.es">Román Navarro</author>
   <author email="duckfrost@theconstructsim.com">Duckfrost</author>
   
-  <buildtool_depend>catkin</buildtool_depend>
-    
   <maintainer email="asoriano@robotnik.es">Angel Soriano</maintainer>
   <maintainer email="avillena@robotnik.es">Álvaro Villena</maintainer>
   <maintainer email="dredo@robotnik.es">David Redó</maintainer>
